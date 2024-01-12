@@ -1002,9 +1002,19 @@ textarea.input-field {
 }
 
 
-
-
-
+@media (max-width: 768px) {
+  .hero{
+    padding-top: 50px !important;
+    min-height: 70vh;
+   }
+   .hero figure img{
+    width: 250px;
+    margin: auto;
+   }
+   .hero-title{
+    font-size: 2rem;
+   }
+  }
 /**
  * responsive for larger than 768px screen
  */
@@ -1014,6 +1024,7 @@ textarea.input-field {
   /**
    * REUSED STYLE
    */
+ 
 
   .container { max-width: 720px; }
 
