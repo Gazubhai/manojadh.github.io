@@ -20,8 +20,8 @@
    * colors
    */
 
-  --raw-seinna: #72d3ff;
-  --sizzling-sunrise: #4bb2e1;
+  --raw-seinna: #16cbcb;
+  --sizzling-sunrise: #16cbcb;
   --scarlet: hsl(13, 96%, 47%);
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
@@ -509,7 +509,9 @@ main { overflow-x: hidden; position: relative; z-index: 9; }
   margin-bottom: 30px;
   opacity: 0.7;
 }
-
+body.light_theme .hero-banner {
+  opacity: 1;
+}
 :is(.hero-social-list, .scroll-down) { display: none; }
 
 .hero-content { max-width: 600px; }
@@ -526,7 +528,7 @@ main { overflow-x: hidden; position: relative; z-index: 9; }
 .card-icon svg{
     height: auto;
     width: 30px;
-    color: var(--black);
+    color: var(--white);
 }
 
 
@@ -750,7 +752,7 @@ main { overflow-x: hidden; position: relative; z-index: 9; }
   opacity: 0;
   transition: var(--transition-1);
   border-radius: 5px;
-  color: var(--black)
+  color: var(--white)
 }
 .project-card time{
   display: inline-flex;
