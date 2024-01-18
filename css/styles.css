@@ -11907,8 +11907,57 @@ header:before {
   filter: blur(150px);
   opacity: 0.2;
 }
-
+.user-f{
+  background-color: #fff; border-radius: 20px; padding: 50px
+}
+.user-f img{
+  height: 400px;
+  object-fit: cover;
+  border-radius: 30px;
+  padding: 30px;
+  overflow: hidden;
+  padding-top: 0;
+  object-position: top;
+}
 @media (max-width: 768px){
+  .page-block{
+    align-items: start !important;
+    min-height: auto !important
+  }
+  .page-block{
+    padding: 30px 15px !important;
+  }
+  .flex-sm-column{
+    flex-direction: column !important;
+  }
+  .user-f img{
+    padding: 30px 0 !important
+  }
+  .d-flex ol{
+    width: 100%;
+  }
+  .content h1{
+    font-size: 25px !important;
+  }
+  p{
+    text-align: left !important;
+  }
+  img{
+    height: auto !important;
+  }
+  .content h3{
+    text-align: left !important;
+  }
+  .content ol{
+    padding-left: 0px !important;
+  }
+  .user-f{
+    padding: 25px 10px !important;
+  }
+  .page-journey{
+    padding: 60px 25px !important;
+    margin-top: 4rem;
+  }
   header.masthead .masthead-heading{
 font-size: 2rem;
   width: 100% !important;
@@ -11970,10 +12019,10 @@ font-size: 2rem;
 
      .content h1 {
         font-family: 'Dela Gothic One', serif;
-        margin-bottom: 10px;
-        letter-spacing: 01px;
-        color: #9b1e5c;
-        font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0;
+    color: #9b1e5c;
+    font-weight: 500;
       }
 
       @media (min-width: 800px) {
@@ -11982,12 +12031,12 @@ font-size: 2rem;
         }
       }
       .content h3 {
-        color: #3e4488;
-        font-family: 'Bricolage Grotesque', serif;
-        font-weight: 800;
-        line-height: 1.5;
-        margin: 25px 0;
-        text-transform: capitalize;
+            color: #9b1e5c;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Bricolage Grotesque', serif;
+    font-weight: 600;
+    text-align: justify;
       }
 
       @media (min-width: 800px) {
@@ -11996,11 +12045,12 @@ font-size: 2rem;
         }
       }
       p {
-        font-size: 25px;
-        line-height: 35px;
+        font-size: 18px;
+        line-height: 28px;
         font-family: 'Bricolage Grotesque', serif;
         font-weight: 100;
         color: #363747;
+        text-align: justify;
       }
 
       .nav {
@@ -12044,20 +12094,20 @@ font-size: 2rem;
         height: 6px;
         border-radius: 100%;
         vertical-align: middle;
-        border: 1px solid #fff;
+        border: 1px solid #9b1e5c;
       }
 
       .dot-nav a:hover {
         -webkit-transition: all 0.15s ease-in-out;
         transition: all 0.15s ease-in-out;
-        background-color: #fff;
+        background-color: #9b1e5c;
         -webkit-transform: scale(2);
         -ms-transform: scale(2);
         transform: scale(2);
       }
 
       .dot-nav a.active {
-        background-color: #fff;
+        background-color: #9b1e5c;
         -webkit-transform: scale(2);
         -ms-transform: scale(2);
         transform: scale(2);
@@ -12095,30 +12145,29 @@ font-size: 2rem;
 
       .page-block {
         background-size: cover;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
       }
 
       .content {
-        width: 89%;
         margin: 0 auto;
         padding: 0;
         color: #363747;
-        font-size: 20px;
+        font-size: 16px;
       }
       .content h1{
-            font-size: 44px;
+            font-size: 40px;
       line-height: 1.3;
       }
-      .content h3{
-        font-size: 18px;
-      }
+      
       .content ol li {
         margin-left: 25px;
+        font-weight: 300;
       }
       .content ol strong {
-        margin-left: -25px;
+        margin-left: 0px;
+        font-weight: 600;
       }
       .content ol{
         font-family: 'Bricolage Grotesque', serif;
@@ -12217,8 +12266,7 @@ font-size: 2rem;
   align-items: center;
 }
 .my-row{
-    background: #20385a;
-    padding: 65px 30px;
+    background: transparent;
     border-radius: 40px;
 }
 .my-row p{
@@ -12242,4 +12290,15 @@ font-size: 2rem;
     border-radius: 20px;
     padding: 25px;
     color: #fff;
+}
+.page-journey{
+  background: #18183c;
+  max-width: 100%;
+  padding: 50px 150px;
+}
+.page-journey h1, .page-journey h3{
+  color: #72d3ff;
+}
+.page-journey p{
+  color: #e4e4e4;
 }
