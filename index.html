@@ -11,26 +11,19 @@
     />
     <meta
       property="og:description"
-      content="Transform your online presence with our professional web design services. We specialize in crafting visually appealing and functional websites. Elevate your digital presence with our top-notch UI/UX design services. We create intuitive interfaces for enhanced user experiences."
+      content="Transform your online presence with my professional web design services. I specialize in crafting visually appealing and functional websites. Elevate your digital presence with my top-notch UI/UX design services. I create intuitive interfaces for enhanced user experiences."
     />
     <meta property="og:image" content="./favicon.svg" />
     <meta property="og:url" content="Manoj Adhikari | Digital Designer" />
     <meta
       name="description"
-      content="Elevate your digital presence with our top-notch UI/UX design services. We create intuitive interfaces for enhanced user experiences."
+      content="Elevate your digital presence with my top-notch UI/UX design services. I create intuitive interfaces for enhanced user experiences."
     />
     <meta
       name="description"
-      content="Transform your online presence with our professional web design services. We specialize in crafting visually appealing and functional websites."
+      content="Transform your online presence with my professional web design services. I specialize in crafting visually appealing and functional websites."
     />
-    <meta
-      name="description"
-      content="Revolutionize your website's appearance and performance with our frontend design expertise. We focus on responsive and user-friendly designs."
-    />
-    <meta
-      name="description"
-      content="Bring your brand to life with our creative graphic design services. From logos to visuals, we specialize in delivering stunning and impactful designs."
-    />
+
     <!-- 
     - favicon
   -->
@@ -1270,8 +1263,9 @@
           </a>
         </p>
 
-        <p class="copyright">
-          &copy; 2022 <a href="#">Manoj</a>. All rights reserved
+        <p class="copyright" style="display: flex">
+          &copy; <span id="currentYear"></span><a href="">&nbsp;Manoj</a>. All
+          rights reserved
         </p>
       </div>
     </footer>
@@ -1292,6 +1286,10 @@
     <!-- 
     - ionicon link
   -->
+    <script>
+      document.getElementById('currentYear').textContent =
+        new Date().getFullYear();
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
