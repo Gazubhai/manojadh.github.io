@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manoj Adhikari</title>
+    <meta
+      property="og:title"
+      content="Manoj Adhikari, UI/UX, Frontend and Graphic Designer"
+    />
+    <meta
+      property="og:description"
+      content="Transform your online presence with my professional web design services. I specialize in crafting visually appealing and functional websites. Elevate your digital presence with my top-notch UI/UX design services. I create intuitive interfaces for enhanced user experiences."
+    />
+    <meta property="og:image" content="./favicon.svg" />
+    <meta property="og:url" content="Manoj Adhikari | Digital Designer" />
+    <meta
+      name="description"
+      content="Elevate your digital presence with my top-notch UI/UX design services. I create intuitive interfaces for enhanced user experiences."
+    />
+    <meta
+      name="description"
+      content="Transform your online presence with my professional web design services. I specialize in crafting visually appealing and functional websites."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+      * {
+        box-sizing: border-box;
+        font-family: 'Bricolage Grotesque', sans-serif;
+      }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background-color: #000;
+        font-family: 'Bricolage Grotesque', sans-serif;
+      }
+
+      header {
+        min-height: 100vh;
+        position: relative;
+        .container {
+          max-width: 1368px;
+          margin: 0 auto;
+          padding: 1rem 2rem;
+          .navbar {
+            min-height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+              font-size: 2.25rem;
+              text-decoration: none;
+              text-transform: uppercase;
+              color: #fff;
+              font-weight: 700;
+            }
+            .nav-links {
+              display: flex;
+              align-items: center;
+              li {
+                list-style-type: none;
+                a {
+                  text-decoration: none;
+                  color: #fff;
+                  margin: 0 1.25rem;
+                  font-weight: 500;
+                  font-size: 1.05rem;
+                  position: relative;
+                  &::after {
+                    position: absolute;
+                    content: '';
+                    background-color: #fff;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0%;
+                    height: 3px;
+                    transition: 0.3s ease all;
+                  }
+                  &:hover::after {
+                    width: 100%;
+                  }
+                }
+              }
+              button {
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 0.75rem 1rem;
+                margin: 0 1rem;
+                border-radius: 6px;
+                background: transparent;
+                border: 2px solid #fff;
+                color: #fff;
+                font-weight: 500;
+              }
+            }
+            i {
+              display: none;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+          .showcase {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 35rem;
+            h1 {
+              color: #fff;
+              font-size: 2.5rem;
+              margin-bottom: 0;
+              font-weight: 700;
+              margin-bottom: 1rem;
+            }
+            p {
+              margin-top: 0;
+              color: #fff;
+              font-weight: 500;
+              line-height: 1.4;
+              font-size: 0.9rem;
+              width: 30rem;
+            }
+            button {
+              margin-top: 1rem;
+              background-color: #000;
+              color: #fff;
+              border: none;
+              outline: none;
+              padding: 1rem 1.5rem;
+              font-size: 0.9rem;
+              border-radius: 6px;
+              cursor: pointer;
+            }
+          }
+        }
+        .video-container {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+          }
+        }
+      }
+
+      @media (max-width: 850px) {
+        header {
+          .container {
+            .navbar {
+              .nav-links {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+                height: 100%;
+                width: 225px;
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                transform: translateX(-100%);
+                transition: 0.4s ease all;
+                z-index: 10;
+                li {
+                  a {
+                    color: #000;
+                    &::after {
+                      background-color: #000;
+                    }
+                  }
+                }
+                button {
+                  border-color: #000;
+                  color: #000;
+                  padding: 0.75rem 1.5rem;
+                }
+                &.active {
+                  transform: translateX(0%);
+                }
+              }
+              i {
+                display: block;
+              }
+            }
+            .showcase {
+              min-height: 80vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              text-align: center;
+              h1 {
+                font-size: 2.25rem;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        header {
+          .container {
+            .showcase {
+              h1 {
+                font-size: 2.1rem;
+              }
+              p {
+                font-size: 0.85rem;
+                width: 300px;
+              }
+            }
+          }
+        }
+      }
+      .enter-content {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+        text-align: center;
+      }
+      h1 {
+        color: #fff;
+        font-weight: 300;
+
+        font-size: 35px;
+        margin: 0 20px;
+        text-shadow: 0px 10px 10px #0000005c;
+      }
+      a.yes {
+        position: relative;
+        padding: 20px 30px;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+        color: #16cbcb;
+        text-decoration: none;
+        overflow: hidden;
+        background: #133232;
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+      a.yes:hover {
+        background-color: #000;
+      }
+      a.yes span:nth-child(1) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #17161800, #16cbcb);
+        animation: animate1 2s linear infinite;
+      }
+
+      @keyframes animate1 {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      a.yes span:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(to bottom, #17161800, #16cbcb);
+        animation: animate2 2s linear infinite;
+        animation-delay: 1s;
+      }
+      @keyframes animate2 {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      a.yes span:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to left, #17161800, #16cbcb);
+        animation: animate3 2s linear infinite;
+      }
+
+      @keyframes animate3 {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      a.yes span:nth-child(4) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(to top, #17161800, #16cbcb);
+        animation: animate4 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes animate4 {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+      a.no:hover {
+        color: #eee;
+        text-decoration: underline;
+      }
+      .logo {
+        position: relative;
+        min-width: 77px;
+        z-index: 2;
+      }
+      .logo span {
+        display: inline-block;
+        color: var(--raw-seinna);
+        margin-left: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1
+        class="h1 logo"
+        style="
+          font-family: Saira Stencil One;
+          margin: 15px;
+          text-align: center;
+          position: relative;
+          top: 0px;
+        "
+      >
+        Manoj<span>.</span>
+      </h1>
+      <div class="enter-content">
+        <h1 style="margin-bottom: 45px; display: block">
+          Looking for a Digital Designer?
+          <span style="color: #16cbcb"></span>
+        </h1>
+        <a href="home.html" class="yes" style="display: inline-block">
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          Yes! Let me in
+        </a>
+        <a
+          href="https://www.youtube.com/watch?v=yYRB4_5LBII&ab_channel=ClassicMrBean"
+          class="no"
+          style="
+            display: inline-block;
+            margin-top: 25px;
+            color: #bbb;
+            text-decoration: none;
+          "
+        >
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+          No
+        </a>
+      </div>
+    </header>
+  </body>
+</html>
